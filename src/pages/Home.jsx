@@ -97,12 +97,10 @@ const Home = () => {
   </Carousel>
 </div>
 
-
 <ul className="movies-grid">
       {popularMovies.map((movie) => (
         <li key={movie.id}>
-          
-          <img src={imageBaseUrl + movie.backdrop_path} alt={movie.title} />
+            <img src={imageBaseUrl + movie.backdrop_path} alt={movie.title} />
             <div className="movie-info">
               <h2>{movie.title}</h2>
               <p className="movie-info-item">Release Date: <span>{movie.release_date}</span></p>
@@ -113,8 +111,8 @@ const Home = () => {
               <span><h2><img src="https://pngimg.com/uploads/plus/plus_PNG26.png"/> Buy Now</h2></span>
               </a>
               </Link>
-          </div>
-          
+              <h2>$12.99</h2>  
+          </div>  
         </li>
       ))}
     </ul>
