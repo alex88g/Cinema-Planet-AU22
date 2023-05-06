@@ -51,26 +51,27 @@ const Home = () => {
         {[...Array(emptyStars)].map((_, index) => (
           <span key={index} className="star">&#9734;</span>
         ))}
-        <span className="rating-value">{rating}</span>
+        <span className="rating-value">{rating/2}</span>
       </div>
     );
   };
 
   return (
     <div className="Home">
-      <div className="search-bar">
-      <input type="text" placeholder="Search movies" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+      <div className="search-bar"> 
+        <input type="text" placeholder="Search movies" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}  />
       </div>
-      <div className="categories"> {Object.keys(genres).map((id) => (
-      <span
-      key={id}
-      className={id === selectedCategory ? "active" : ""}
-      onClick={() => setSelectedCategory(id)}
-    >
-      {genres[id]}
-    </span>
-  ))}
-</div>
+      <div className="categories">
+        {Object.keys(genres).map((id) => (
+          <span
+            key={id}
+            className={id === selectedCategory ? "active" : ""}
+            onClick={() => setSelectedCategory(id === selectedCategory ? "" : id)}
+          >
+            {genres[id]}
+          </span>
+        ))}
+      </div>
 
       <div className="poster">
         <Carousel
@@ -100,6 +101,7 @@ const Home = () => {
 <ul className="movies-grid">
       {popularMovies.map((movie) => (
         <li key={movie.id}>
+           <Link to={`/movie/${movie.id}`}>
             <img src={imageBaseUrl + movie.backdrop_path} alt={movie.title} />
             <div className="movie-info">
               <h2>{movie.title}</h2>
@@ -113,6 +115,7 @@ const Home = () => {
               </Link>
               <h2>$12.99</h2>  
           </div>  
+          </Link>
         </li>
       ))}
     </ul>

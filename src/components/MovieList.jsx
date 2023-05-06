@@ -40,7 +40,7 @@ const MovieList = () => {
       .join(", ");
   };
 
-  const Rating = ({ rating }) => {
+  const Rating = ({ rating}) => {
     const stars = Math.round(rating / 2);
     const emptyStars = 5 - stars;
 
@@ -52,7 +52,7 @@ const MovieList = () => {
         {[...Array(emptyStars)].map((_, index) => (
           <span key={index} className="star">&#9734;</span>
         ))}
-        <span className="rating-value">{rating}</span>
+        <span className="rating-value">{rating / 2}</span>
       </div>
     );
   };

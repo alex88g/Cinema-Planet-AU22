@@ -3,7 +3,7 @@
   padding: 2.5rem 0;
   align-items: center;
   display: flex;
-  justify-content:space-between;
+  height: 5px;
 }
 
 .headerLeft, .headerRight {
@@ -30,4 +30,29 @@ a > span:hover {
 
 .user__avatar {
   font-size: 2rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.header__cartIcon {
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.header__cartIcon:hover {
+  opacity: 0.8;
+}
+h1{
+  color: white;
+  font-size: medium;
+  margin-left: 740px;
+  padding-right: 0.5rem;
+}
+h2 {
+  color: white;
+  font-size: medium;
 }

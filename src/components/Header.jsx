@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="header">
       <div className="headerLeft">
@@ -23,7 +23,23 @@ const Header = () => {
           <span>Upcoming</span>
         </Link>
       </div>
+      <div>
+        <h1>
+          <Link to="/login">Signout</Link>
+        </h1>
+      {/* <h2>{props.name ? `Welcome - ${props.name}` : "Login"}</h2> */}
     </div>
+      <div className="headerRight">
+        <Link to="/cart">
+          <img
+            className="header__cartIcon"
+            src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG28.png"
+            alt="Cart"
+          />
+        </Link>
+      </div>
+      </div>
+    
   );
 };
 
