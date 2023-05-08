@@ -21,24 +21,18 @@ function App() {
       } else setUserName("");
     });
   }, []);
-
-  const [app, setApp] = useState(null);
-
-  useEffect(() => {
-  
-  }, []);
  
   return (
     <div className="App">
       <HashRouter>
-        <Header />
+        <Header name={userName}/>
         <Routes>
-          <Route exact path="/home" element={<Home />}></Route>
+          <Route exact path="/" element={<Home />}></Route>
           <Route path="movies/:type" element={<MovieList />}></Route>
           <Route path='/movie/:movie_id' element= {<MovieDetails />} ></Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<Home name={userName} />} />
+          {/* <Route path="/" element={<Header name={userName} />} /> */}
         </Routes>
         </HashRouter>
     </div>

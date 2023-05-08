@@ -2,7 +2,7 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  background-color: darkred;
+  /* background-color: darkred; */
   width: 100%;
   padding-left: 2%;
   padding-right: 2%;
@@ -10,6 +10,7 @@
 
 .container {
   background-color: black;
+  color: white;
   display: grid;
   flex-wrap: wrap;
   align-items: center;

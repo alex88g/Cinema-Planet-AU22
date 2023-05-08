@@ -12,6 +12,7 @@
 
 .innerBox {
   /* background: linear-gradient(to right, #9900ff, #cc80ff); */
+  background: linear-gradient(to right, #211f22, #7d7b7f);
   min-width: 480px;
   height: fit-content;
   width: fit-content;
@@ -63,13 +64,13 @@
 
 .footer p {
   font-weight: 700;
-  color: #000;
+  color: white;
 }
 
 .footer p span a {
   font-weight: bold;
   /* color: #9900ff; */
-  color:#616161;
+  color: white;
   letter-spacing: 1px;
   font-size: 1rem;
   text-decoration: none;

@@ -151,7 +151,12 @@ const MovieDetails = () => {
                 <header> </header>
                 <div>
                     <div className="container">
+                   
+                       
                         <header className="titleContainer">
+                        <div className="recMoviesContainer">
+                            {recElement}
+                        </div>
                             <h1>{title}</h1>
                             <br/>
                             <div className="movieInfo">
@@ -202,10 +207,7 @@ const MovieDetails = () => {
 
                         </div>
 
-                        <br />
-                        <div className="recMoviesContainer">
-                            {recElement}
-                        </div>
+                        
                     </div>
 
                 </div>

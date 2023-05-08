@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { auth } from "../firebase";
 
 const Header = (props) => {
+  const [error, setError] = useState(null);
+
+  const handleSignOut = async () => {
+    try {
+      await auth.signOut();
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
     <div className="header">
       <div className="headerLeft">
@@ -22,25 +33,37 @@ const Header = (props) => {
         <Link to="/movies/upcoming">
           <span>Upcoming</span>
         </Link>
+        <div>
+          {props.name ? (
+            <div>
+              <h2>{`Welcome - ${props.name}`}</h2>
+              <h1>
+                {error && <div>{error}</div>}
+                <btn onClick={handleSignOut}>Sign Out</btn>
+              </h1>
+            </div>
+          ) : (
+            <div>
+              <h2>Login please</h2>
+              <h1>
+                <Link to="/login">Login</Link>
+              </h1>
+            </div>
+          )}
+        </div>
       </div>
-      <div>
-        <h1>
-          <Link to="/login">Signout</Link>
-        </h1>
-      {/* <h2>{props.name ? `Welcome - ${props.name}` : "Login"}</h2> */}
-    </div>
       <div className="headerRight">
         <Link to="/cart">
           <img
             className="header__cartIcon"
-            src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG28.png"
+            src="https://user-images.githubusercontent.com/113544188/236866391-56ce7702-7d4f-4b3b-8d58-f6725c68173f.png"
             alt="Cart"
           />
         </Link>
       </div>
-      </div>
-    
+    </div>
   );
 };
 
 export default Header;
+

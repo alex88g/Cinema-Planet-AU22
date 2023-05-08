@@ -17,6 +17,7 @@
   width: fit-content;
   background-color: #fff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #211f22, #7d7b7f);
   padding: 30px;
   border-radius: 10px;
   display: flex;
@@ -63,13 +64,13 @@
 
 .footer p {
   font-weight: 700;
-  color: #000;
+  color: white;
 }
 
 .footer p span a {
   font-weight: bold;
   /* color: #9900ff; */
-  color: #616161;
+  color: white;
   letter-spacing: 1px;
   font-size: 1rem;
   text-decoration: none;

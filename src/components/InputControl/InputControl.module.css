@@ -7,7 +7,7 @@
 .container label {
   font-weight: 700;
   font-size: 1rem;
-  color: #313131;
+  color: white
 }
 
 .container input {
@@ -23,5 +23,5 @@
 }
 
 .container input:focus {
-  border-color: #9900ff;
+  border-color: #25262c;
 }
