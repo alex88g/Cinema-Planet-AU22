@@ -11,7 +11,6 @@
 }
 
 .innerBox {
-  /* background: linear-gradient(to right, #9900ff, #cc80ff); */
   background: linear-gradient(to right, #211f22, #7d7b7f);
   min-width: 480px;
   height: fit-content;
@@ -41,7 +40,6 @@
 .footer button {
   outline: none;
   border: none;
-  /* background-color: #9900ff; */
   background-color: #616161;
   color: #fff;
   border-radius: 5px;
@@ -58,7 +56,6 @@
 }
 
 .footer button:hover {
-  /* background-color: #aa2aff; */
   background-color: rgb(171, 171, 171);
 }
 
