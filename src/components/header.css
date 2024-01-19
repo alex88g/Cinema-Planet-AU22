@@ -3,19 +3,26 @@
   padding: 2.5rem 0;
   align-items: center;
   display: flex;
-  height: 5px;
+  height: 5rem; /* Adjusted height for desktop */
 }
 
-.headerLeft, .headerRight {
+.headerLeft {
   display: flex;
   align-items: center;
 }
 
+.headerRight {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Move to the right side */
+}
+
 a > span {
-  margin: 0 30px;
-  font-size: 1.3rem;
+  margin: 0 15px; /* Adjusted margin for spacing */
+  font-size: 1.2rem; /* Adjusted font size */
   cursor: pointer;
   color: white;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 a > span:hover {
@@ -23,7 +30,8 @@ a > span:hover {
 }
 
 .header__icon {
-  width: 80px;
+  width: 100px; /* Set your desired width */
+  height: 80px; /* Set your desired height */
   cursor: pointer;
 }
 
@@ -31,16 +39,11 @@ a > span:hover {
   font-size: 2rem;
 }
 
-.headerRight {
-  display: flex;
-  align-items: center;
-}
-
 .header__cartIcon {
-  height: 40px;
+  height: 30px; /* Adjusted height for cart icon */
   object-fit: contain;
   cursor: pointer;
-  margin-top: 20px;
+  transition: opacity 0.3s ease; /* Smooth opacity transition on hover */
 }
 
 .header__cartIcon:hover {
@@ -48,96 +51,39 @@ a > span:hover {
 }
 
 .header__login {
-  margin-left: 30px;
-  font-size: 1.3rem;
+  margin-left: 20px; /* Adjusted margin for spacing */
+  font-size: 1.2rem; /* Adjusted font size */
   cursor: pointer;
   color: white;
 }
 
-.header__login:hover {
-  color: red;
-}
-
-h1 {
-  color: white;
-  font-size: medium;
-  margin-left: 680px;
-  padding-right: 3rem;
-  cursor: pointer;
-}
-
-h1:hover {
-  opacity: 0.8;
-}
-
-h2 {
-  color: white;
-  font-size: medium;
-}
-
-/* Media queries */
-@media only screen and (max-width: 600px) {
+/* Mobile Styles */
+@media (max-width: 844px) {
   .header {
-    margin: 0 1rem;
-    padding: 1rem 0;
-    height: 3px;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    height: auto;
   }
 
-  a > span {
-    font-size: 1rem;
-    margin: 0 15px;
+  .headerLeft,
+  .headerRight {
+    margin: 0;
+    padding: 0.5rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header__icon {
+    width: 60px; /* Adjusted width for icon on mobile */
+    height: auto; /* Allow height to adjust automatically */
+    margin-bottom: 1rem; /* Add margin between icon and other elements */
+  }
+
+  .user__avatar {
+    font-size: 1.5rem; /* Adjusted font size on mobile */
   }
 
   .header__cartIcon {
-    height: 30px;
-    margin-top: 10px;
-  }
-
-  .header__login {
-    margin-left: 15px;
-    font-size: 1rem;
-  }
-
-  h1 {
-    margin-left: 100px;
-    padding-right: 1rem;
-    font-size: small;
-  }
-
-  h2 {
-    font-size: small;
-  }
-}
-
-@media only screen and (min-width: 601px) {
-  .header {
-    margin: 0 2.5rem;
-    padding: 2.5rem 0;
-    height: 5px;
-  }
-
-  a > span {
-    font-size: 1.3rem;
-    margin: 0 30px;
-  }
-
-  .header__cartIcon {
-    height: 40px;
-    margin-top: 20px;
-  }
-
-  .header__login {
-    margin-left: 30px;
-    font-size: 1.3rem;
-  }
-
-  h1 {
-    margin-left: 680px;
-    padding-right: 3rem;
-    font-size: medium;
-  }
-
-  h2 {
-    font-size: medium;
+    height: 20px; /* Adjusted height for cart icon on mobile */
   }
 }

@@ -88,9 +88,10 @@
   margin-left: auto;
 }
 
+
 .logo_heading {
   margin-left: 250px;
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 2.2rem;
   color: white;
 }
@@ -100,12 +101,13 @@
 }
 
 .logo_production {
-  width: 85%;
+  
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin-bottom: 4rem;
   color: white;
+  margin-left: 170px;
 }
 
 .logoContainer {
@@ -113,6 +115,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem;
+  width: 100px;
+  
+
 }
 
 .logo {
@@ -121,146 +127,234 @@
 }
 
 .trailerContainer {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
-.trailerContainer h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  max-width: 400px;
+  top: 0px;
+  padding: 20px;
+  margin-bottom: 0;
 }
 
 .videoContainer {
-  margin-right: 300px;
-  display: grid;
+  height: 250px;
+  margin-right: 0px;
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
 }
 
 .videoContainer div {
+  
+  flex: 0 0 auto; 
   position: relative;
+  width: 250px; 
   padding-bottom: 56.25%;
   height: 0;
 }
 
 .videoContainer iframe {
+  
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height:100%;
 }
 
 .comment-box {
-  display: flex
-;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  textarea {
-    height: 100px;
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  .ratings {
-    display: inline-block;
-    font-size: 15px;
-    cursor: pointer;
-  }
-  
-  .fa {
-    color: #ddd;
-  }
-  
-  .checked {
-    color: yellow;
-  }
-  
-  .comment-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .comment-button:hover {
-    background-color: #3e8e41;
-  }
-  
-  .comments {
-    margin-top: 20px;
-  }
-  
-  .comment {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  
-  
-  
-  .comment-button {
-    background-color: #008CBA;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  .comment-button:hover {
-    background-color: #006B8C;
-  }
-  
-  textarea {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ratings {
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.fa {
+  color: #ddd;
+}
+
+.checked {
+  color: yellow;
+}
+
+.comment-button:hover {
+  background-color: #3e8e41;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.comment {
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+ 
+}
+
+.comment-button {
+  background-color: #616161;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.comment-button:hover {
+  background-color: rgb(171, 171, 171);
+}
+
+
+
+
+    
+   
+@media (max-width: 844px) {
+
+  .wrapper {
     width: 100%;
-    height: 100px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    resize: none;
+   
+  }
+  .container {
+    width: 70%; 
+    margin-right: 15px;
+  }
+
+  .recMoviesContainer {
+    height: 150px; 
+    width: 300px;
+  
+  
+  }
+
+  .tittleContainer {
+    bottom: 70px; 
+    margin-left: -40px;
+  }
+
+  .postr {
+   top: 0;
+    position: absolute;
+    width: 70px;
+    margin-left: 50px;  
+  }
+
+  .info_detailRight {
+    height: 100px; 
+    width: 300px;
+    font-size: small;
+    margin-top: 120px;
+    margin-left: 20px;
+  }
+
+ 
+
+  .info_genres .info_genre{
+    font-size: x-small;
+    width: 10px;
+    margin: 1.25rem 0;
+    margin: 2px;
+  }
+
+  .info_name {
+    font-size: 1rem; 
+  }
+
+  .info_voteCount {
+    margin-left: 0; 
+  }
+
+  .summaryText {
+    margin-top: 0px; 
+    font-size: 1rem; 
+    width: 300px;
   }
   
-  .rating {
-    display: inline-block;
-  }
+    .movieInfo {
+      margin-top: 0px;
+      margin-right: 0px;  
+
+  }  
+
+
+
+.comment-box{
+  margin-top: 550px;
+  margin-left: 100px;
+}
+
+    textarea {
+      margin-top: 0px;
+      width: 300px;
+      
   
-  .checked {
-    color: yellow;
-  }
+    }
+
+    .comment-button   {
+    
+        margin-top: 50px;
+         width: 300px;
+    
+    }
+
+    .logo_heading{
+    font-size: medium;
+     width: 70px;
+ 
+    }
+
+     .logoContainer .logo   {
+      
+      font-size: medium;
+      width: 70px;
+     
+    
+    }
+
+    .logo_production{
+    
+    margin-right: 150px;
+   
+    }
+
+    .trailerContainer {
+      position: absolute;
+      margin-top: 500px;
+      max-width: 300px;
+      right: -50px;
+    
+    
+    }
+    
+    .videoContainer {
+      height: 250px;
+         
+     
+    }
+
+
+    
+}
   
-  .unchecked {
-    color: #ddd;
-  }
+
   
-  .comments {
-    margin-top: 20px;
-  }
-  
-  .comment {
-    background-color: #ffffff;
-    color: black;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-  }
+
