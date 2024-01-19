@@ -10,6 +10,24 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorElement, setErrorElement] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const onLogin = (e) => {
+        e.preventDefault();
+        setIsLoading(true); // Set loading state
+      
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // ... (existing code)
+          })
+          .catch((error) => {
+            // ... (existing code)
+          })
+          .finally(() => setIsLoading(false)); // Reset loading state
+      };
+      
+      // Conditionally render loading indicator
+      {isLoading && <p>Loading...</p>}
 
     const onSubmit = async () => {
         
@@ -20,6 +38,7 @@ const Signup = () => {
                 const user = userCredential.user;
                 console.log(user);
                 navigate('/login');
+                setErrorElement(null);
             })
             .catch((error) => {
                 const errorCode = error.code;
