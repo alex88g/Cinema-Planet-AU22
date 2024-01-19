@@ -60,7 +60,7 @@ export const getCart = async () => {
 
     const querySnapshot = await getDocs(collectionRef);
     querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
+      doc.data() //s never undefined for query doc snapshots
       cartItems.push(doc.data());
     });
     
